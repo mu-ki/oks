@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-function App() {
+function App1() {
   return (
     <div className = "warpper">
         <nav class="navbar navbar-dark bg-primary">
@@ -62,4 +62,4 @@ function App() {
   );
 }
 
-export default App;
+export default App1;

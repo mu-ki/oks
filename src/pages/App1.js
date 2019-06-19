@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import { NavLink } from 'react-router-dom'; 
 
 function App1() {
   return (
@@ -17,7 +18,6 @@ function App1() {
               alt="Avatar"
               class="avatar float-right"
             />
-            {/* <br/><br/><br/> */}
           </div>
           <div className="fordiv">
             <form className="flex-lg-column">
@@ -49,9 +49,11 @@ function App1() {
                   placeholder="Enter Email id"
                 />
                 <div>
+                <NavLink to="/App2">
                 <button type="submit" className="btn btn-primary button">
                   Next &rarr;
                 </button>
+                </NavLink>
               </div>
               </div>
               

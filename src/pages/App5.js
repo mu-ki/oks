@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.css";
 import { NavLink } from 'react-router-dom';
-import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 
 
 class App5 extends Component {
@@ -43,10 +42,11 @@ class App5 extends Component {
               class="avatar float-right"
             />
             <NavLink to="/App4">
-            <i className="fas fa-arrow-left"
+            <img
+              src={require("../img/back.jpg")}
               alt="Avatar"
               class="avatar float-left"
-            ></i>
+            />
             </NavLink>
           </div>
           <div className="fordiv">

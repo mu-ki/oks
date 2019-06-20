@@ -1,20 +1,41 @@
-import React from "react";
-import "./App.css";
+import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.css";
-import { NavLink } from 'react-router-dom'; 
-import CharCount from '../components/CharCount'
+import { NavLink } from 'react-router-dom';
 
 
-function App3() {
-  return (
-    <div className = "warpper">
+class App3 extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      value: "",
+      list: []
+    };
+  }
+
+  onChangeValue = event => {
+    this.setState({ value: event.target.value });
+  };
+
+  onAddItem = () => {
+    this.setState(state => {
+      const list = state.list.concat(state.value);
+
+      return {
+        list,
+        value: ""
+      };
+    });
+  };
+  render() {
+    return <div className = "warpper">
         <nav class="navbar navbar-dark bg-primary">
           <a class="navbar-brand mx-auto" href="#!">
             <center>#orukadhasoltasir</center>
           </a>
         </nav>
         <div className="fulldiv" >
-          <div className="imgdiv">
+        <div className="imgdiv">
           <img
               src={require("../img/index.jpg")}
               alt="Avatar"
@@ -28,26 +49,51 @@ function App3() {
             />
             </NavLink>
           </div>
-          
-          <div className="fordiv">
-            <lable className = "upload">One word or a sentance that would give for yourself.</lable>
-            <CharCount />
-          </div>
           <div className="fordiv">
             <form className="flex-lg-column">
-            <NavLink to="/App4">
+              <div class="form-group">
+                <label className="upload"for="exampleInputEmail1">One word or a sentence that would give for yourself.</label>
+                </div>
+                <div className="input-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search"
+                  value={this.state.value}
+                  onChange={this.onChangeValue}
+                />
+                <div className="input-group-append">
+                  <button
+                    className="btn btn-primary"
+                    type="button"
+                    onClick={this.onAddItem}
+                    disabled={!this.state.value}
+                  >
+                    +
+                  </button>
+                </div>{" "}
+              </div>
+
+              {this.state.list.map(item => (
+                <div class="chip">
+                <span class="closebtn" onclick="">
+                <p key={item}>{item}  &times;</p>
+               
+                </span>
+                </div>
+              ))} 
+             
+              <div class="form-group">
+                <NavLink to="/App5">
                 <button type="submit" className="btn btn-primary1 button">
                   Next &rarr;
                 </button>
                 </NavLink>
-
-              
-              
+              </div>
             </form>
           </div>
         </div>
       </div>
-  );
+  };
 }
-
 export default App3;

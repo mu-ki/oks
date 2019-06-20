@@ -1,7 +1,6 @@
 .avatar {
   vertical-align: middle;
   width: 50px;
-  height: 50px;
   border-radius: 50%;
   margin-top: 30px;
   margin-right: 19px;
@@ -22,24 +21,24 @@
 .bckdiv{
   flex: 1;
   margin-left: 15px;
-  position: absolute;
+  position: bottom;
   top: 58px;
 }
 .fordiv{
   flex: 1;
   padding: 20px;
 }
-.btn-primary {
+.btn-primary1 {
   width: 100%;
   padding-top: 9px;
   padding-bottom: 9px;
-  position: absolute;
+  position: fixed;
   bottom: 15px;
   width: 90vw;
   background-image: linear-gradient(to right, #18b2d4 0%, #054092 100%)
 }
 
-  .imgcenter{
+.imgcenter{
     position: absolute;
     top: 25%;
     left: 43%;
@@ -80,4 +79,40 @@
 .rounded {
   width: 202px;
   height: 230px;
+}
+.chip {
+  display: inline-block;
+  padding: 0 5px;
+  height: 25px;
+  font-size: 18px;
+  line-height: 20px;
+  /* border-radius: 20px; */
+  background-color: #C3DAFC;
+  margin-left: 20px;
+
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 20px;
+  /* border-radius: 50%; */
+}
+
+.closebtn {
+  padding-left: 10px;
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: #000;
+}
+.chipitem{
+  padding-left: 0px;
+    padding-right: 5px;
+    margin-left: 20px;
 }

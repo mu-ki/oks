@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { NavLink } from 'react-router-dom'; 
-import {charCount} from '../components/charCount'
+import CharCount from '../components/CharCount'
 
 
 function App3() {
@@ -31,15 +31,16 @@ function App3() {
           
           <div className="fordiv">
             <lable className = "upload">One word or a sentance that would give for yourself.</lable>
-            <charCount />
+            <CharCount />
           </div>
           <div className="fordiv">
             <form className="flex-lg-column">
-              
-                <button type="submit" className="btn btn-primary button">
+            <NavLink to="/App4">
+                <button type="submit" className="btn btn-primary1 button">
                   Next &rarr;
                 </button>
-              
+                </NavLink>
+
               
               
             </form>

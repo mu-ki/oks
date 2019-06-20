@@ -1,6 +1,6 @@
 import React from 'react';
 
-function charCount() {
+function CharCount() {
 
     return (
       <div class="input-group mb-3">
@@ -20,4 +20,4 @@ function charCount() {
     );
 }
 
-export default charCount;
+export default CharCount;

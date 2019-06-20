@@ -37,7 +37,7 @@ function App2() {
              <ImagePicker />
               </div>
               <NavLink to="/App3">
-                <button type="submit" className="btn btn-primary button">
+                <button type="submit" className="btn btn-primary1 button">
                   Next &rarr;
                 </button>
                 </NavLink>

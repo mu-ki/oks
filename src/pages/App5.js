@@ -1,9 +1,10 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.css";
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 
-class App4 extends Component {
+
+class App5 extends Component {
   constructor(props) {
     super(props);
 
@@ -28,31 +29,32 @@ class App4 extends Component {
     });
   };
   render() {
-    return (
-      <div classNameName="warpper">
-        <nav className="navbar navbar-dark bg-primary">
-          <a className="navbar-brand mx-auto" href="#!">
+    return <div className = "warpper">
+        <nav class="navbar navbar-dark bg-primary">
+          <a class="navbar-brand mx-auto" href="#!">
             <center>#orukadhasoltasir</center>
           </a>
         </nav>
-        <div classNameName="fulldiv">
-          <div classNameName="imgdiv">
-            <img
+        <div className="fulldiv" >
+        <div className="imgdiv">
+          <img
               src={require("../img/trans.jpg")}
               alt="Avatar"
-              className="avatar float-right"
+              class="avatar float-right"
             />
             <NavLink to="/App4">
-              <img
-                src={require("../img/back.jpg")}
-                alt="Avatar"
-                className="avatar float-left"
-              />
+            <i className="fas fa-arrow-left"
+              alt="Avatar"
+              class="avatar float-left"
+            ></i>
             </NavLink>
           </div>
-          <div classNameName="fordiv">
-            <form classNameName="flex-lg-column">
-              <div className="input-group mb-3 fordiv">
+          <div className="fordiv">
+            <form className="flex-lg-column mt-5">
+              <div class="form-group">
+                <label className="upload"for="exampleInputEmail1">What language can you speak?</label>
+                </div>
+                <div className="input-group fordiv">
                 <input
                   type="text"
                   className="form-control"
@@ -71,36 +73,27 @@ class App4 extends Component {
                   </button>
                 </div>{" "}
               </div>
-            </form>
-            {/* <div class="chipitem"> */}
-                {this.state.list.map(item => (
+
+              {this.state.list.map(item => (
                 <div class="chip">
                 <span class="closebtn" onclick="">
                 <p key={item}>{item}  &times;</p>
                
                 </span>
                 </div>
-              
-              
               ))} 
              
-            
-            <form>
-              <div className="form-group">
+              <div class="form-group">
                 <NavLink to="/App6">
-                  <button
-                    className="btn btn-primary1 button"
-                  >
-                    Next &rarr;
-                  </button>
+                <button type="submit" className="btn btn-primary1 button">
+                  Next &rarr;
+                </button>
                 </NavLink>
               </div>
             </form>
           </div>
         </div>
       </div>
-    );
-  }
+  };
 }
-
-export default App4;
+export default App5;
